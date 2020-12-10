@@ -25,7 +25,18 @@ Snapshots and graphs for your to-do list on [https://hollyapp.com/][1]
 - [ ] A script to git-commit the list if it's changed
     - [ ] Make sure branch is set to `treeID`
     - [ ] `curl` into `unixTime.treeID.log`
-        - [ ] Is there a timestamp in the HTTP response? That would be ideal. Otherwised UTC.
+        - [x] Is there a timestamp in the HTTP response? That would be ideal. Otherwised UTC.
+            - So, there are two datetimes you get back:
+                - Date: Thu, 10 Dec 2020 22:02:51 GMT
+                - Content-Disposition: attachment; filename="TODO_2020-12-10_23-02-52.txt"
+            - According to someone on the Internet: "Neither UTC nor GMT ever change for Daylight Saving Time"
+            - Why then is the "Content-Disposition" 1hr ahead? 🤔
+            - Whatever, `date --date="Thu, 10 Dec 2020 22:02:51 GMT" +"%s"` outputs `1607637771`
+        - [ ] Standardize header for `holly-curl.sh` - comma separated:
+            - [ ] treeID
+            - [ ] treeName
+            - [ ] unixTime from server
+            - [ ] lineCount
 - [ ] Visualizations for the current list
 - [ ] Visualizations for the list history
 - [ ] Handle multiple lists as top-level branches
