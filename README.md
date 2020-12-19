@@ -5,12 +5,12 @@ Snapshots and graphs for your to-do list on [https://hollyapp.com/][1]
 - I use [hollyapp][1] and I have some concerns:
     1. I'm going to accidentally delete a big chunk of the tree
     2. Someone stumbles upon my tree ID and unintentionally vandalizes it
-    3. I want ot see how my TODO lish has been progressing over time
-    4. I want to see what time (approximately) I finished a task
-- ALl of these issues can be resolved with keeping the tree in version control...
+    3. I want to see how my TODO list has been progressing over time
+    4. I want to see what time (even approximately) I finished a task
+- All of these issues can be resolved with keeping the tree in version control...
     - ...but I really like the webapp
-    - ...Sync issues would be annoying
-- Actual solution: poll the tree and update in VC
+    - ...sync issues would be annoying
+- Actual solution: poll the tree (every minute) and commit to version control
 
 ## Goals
 - v0.1:
