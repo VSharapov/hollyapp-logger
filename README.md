@@ -23,7 +23,7 @@ Snapshots and graphs for your to-do list on [https://hollyapp.com/][1]
 ## TODO
 - [x] A script to get around the accept-cookies page since `curl https://hollyapp.com/n/dmFzLmltL3dpbi8K` doesn't work anymore
 - [ ] A script to git-commit the list if it's changed
-    - [ ] Make sure branch is set to `treeID`
+    - [x] Make sure branch is set to `treeID`
     - [ ] `curl` into `unixTime.treeID.log`
         - [x] Is there a timestamp in the HTTP response? That would be ideal. Otherwised UTC.
             - So, there are two datetimes you get back:
